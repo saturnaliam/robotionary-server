@@ -9,7 +9,8 @@ let messages = [];
 let imageData;
 
 app.get('/messages', (req, res) => {
-    res.send(messages);
+    console.log(`{ "messages": [${messages}]}`)
+    res.send(`{ "messages": [${messages}] }`);
 });
 
 app.post('/messages', (req, res) => {
@@ -20,7 +21,7 @@ app.post('/messages', (req, res) => {
         return;
     }
     
-    const newMessage = `${user}: ${message}`;
+    const newMessage = `"${user}: ${message}"`;
     messages.push(newMessage);
     res.sendStatus(200);
 })
