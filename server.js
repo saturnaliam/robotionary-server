@@ -5,7 +5,7 @@ const port = 3000;
 
 let messages = [];
 
-app.get('/messages', (res) => {
+app.get('/messages', (req, res) => {
     res.send(messages);
 });
 
@@ -29,5 +29,5 @@ app.delete('/messages', () => {
 })
 
 app.listen(port, () => {
-    console.log(`open at localhost:${port}`);
+    console.log(`open at http://localhost:${port}`);
 })
