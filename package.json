@@ -9,11 +9,10 @@
   "author": "Lucia Cover",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "request": "^2.88.2",
-    "@types/node": "^20.14.12",
     "jest": "^29.7.0"
   }
 }
