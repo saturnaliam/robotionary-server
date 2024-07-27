@@ -4,6 +4,7 @@ app.use(express.json())
 const port = 3000;
 
 let messages = [];
+let imageData;
 
 app.get('/messages', (req, res) => {
     res.send(messages);
@@ -27,6 +28,10 @@ app.delete('/messages', () => {
     messages = [];
     res.sendStatus(200);
 })
+
+app.get('/drawing', () => {
+
+});
 
 app.listen(port, () => {
     console.log(`open at http://localhost:${port}`);

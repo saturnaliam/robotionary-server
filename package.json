@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "server 4 robotionary :3",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "npx jest"
   },
   "author": "Lucia Cover",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "request": "^2.88.2",
+    "@types/node": "^20.14.12",
+    "jest": "^29.7.0"
   }
 }
