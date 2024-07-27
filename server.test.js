@@ -1,5 +1,5 @@
 const request = require('request');
-const url = "http://localhost:3000";
+const url = "http://localhost:5000";
 
 test("ensures messages starts empty", () => {
     const options = {
@@ -13,7 +13,7 @@ test("ensures messages starts empty", () => {
     request(options, (err, res, body) => {
         expect(err).toBeFalsy();
         expect(res.statusCode).toBe(200);
-        expect(JSON.parse(body)).toStrictEqual([]);
+        expect(JSON.parse(body).messages).toStrictEqual([]);
     })
 })
 
@@ -36,6 +36,6 @@ test("makes sure the message was actually posted", () => {
     request(options, (err, res, body) => {
         expect(err).toBeFalsy();
         expect(res.statusCode).toBe(200);
-        expect(JSON.parse(body)).toStrictEqual(["Lucia: Hello!"]);
+        expect(JSON.parse(body).messages).toStrictEqual(["Lucia: Hello!"]);
     })
 })
