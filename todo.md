@@ -2,7 +2,7 @@
 
 - [x] GET: returns a list of the messages
 - [x] POST: adds a new message to the list
-- [ ] DELETE: removes all messages
+- [x] DELETE: removes all messages
 
 ### /logos/[team].jpg
 

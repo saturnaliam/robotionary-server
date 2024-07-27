@@ -3,9 +3,9 @@ const app = express();
 app.use(express.json())
 const port = 3000;
 
-const messages = [];
+let messages = [];
 
-app.get('/messages', (req, res) => {
+app.get('/messages', (res) => {
     res.send(messages);
 });
 
@@ -19,6 +19,12 @@ app.post('/messages', (req, res) => {
     
     const newMessage = `${user}: ${message}`;
     messages.push(newMessage);
+    res.sendStatus(200);
+})
+
+// is this stupid? yes. is this insecure? yes. do i care? not in the slightest
+app.delete('/messages', () => {
+    messages = [];
     res.sendStatus(200);
 })
 
