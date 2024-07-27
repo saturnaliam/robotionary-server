@@ -1,0 +1,13 @@
+{
+  "name": "robotionary-server",
+  "version": "1.0.0",
+  "description": "server 4 robotionary :3",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Lucia Cover",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
