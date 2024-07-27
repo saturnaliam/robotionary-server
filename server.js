@@ -42,7 +42,7 @@ app.post('/drawing', (req, res) => {
     }
     
     imageData = req.body;
-\    res.sendStatus(200);
+    res.sendStatus(200);
 })
 
 app.listen(port, () => {
